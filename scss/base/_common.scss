@@ -16,8 +16,18 @@ body {
 }
 
 .section {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  @include mq(tablet) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 
 .uppertitle {
@@ -63,6 +73,10 @@ body {
   // letter-spacing: 0.05em;
 
   @include fonts(700, 42px, 49px, 0.05em);
+
+  @include mq(desktop) {
+    font-size: 42px;
+  }
 }
 
 .section-title--mode-light {
@@ -74,9 +88,11 @@ body {
 }
 
 .subtitle {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
+  @include fonts(null, 16px, 26px, 0.02em);
+
+  @include mq(desktop) {
+    font-size: 18px;
+  }
 }
 
 .subtitle--mode-light {
